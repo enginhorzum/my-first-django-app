@@ -26,7 +26,7 @@ SECRET_KEY = 'a8896c4a-da38-48a9-96b7-77e7bb482933'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['my-first-django-app.azurewebsites.net']
+ALLOWED_HOSTS = ['my-first-django-app.azurewebsites.net','127.0.0.1']
 
 
 # Application definition
@@ -122,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
 
 LOGIN_REDIRECT_URL = "customer_home"
